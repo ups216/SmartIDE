@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "smartIDE"
+title = "SmartIDE"
 
 enableRobotsTXT = true
 
@@ -54,21 +54,43 @@ id = "UA-00000000-0"
 [languages]
 
 [languages.en]
-title = "smart IDE"
-description = "The Cloud Native IDE."
+title = "SmartIDE"
+description = "Be a Smart Developer, Use SmartIDE."
 languageName ="English"
 contentDir = "content/en"
 # Weight used for sorting.
 weight = 1
 
 [languages.zh]
-title = "smartIDE"
-description = "云原生IDE"
+title = "SmartIDE"
+description = "开源云原生IDE"
 languageName ="中文（简体）"
 contentDir = "content/zh"
 time_format_default = "2006.01.02"
 time_format_blog = "2006.01.02"
 weight = 2
+
+# Additional menu items
+[[languages.zh.menu.main]]
+    name = "快速开始"
+    weight = -100
+    url = "docs/quickstart/"
+
+[[languages.zh.menu.main]]
+    name = "Gitee"
+    url = "https://gitee.com/SmartIDE/SmartIDE"
+    pre = "<i class='iconfont icon-gitee'></i>"
+    weight = 50
+
+[[languages.en.menu.main]]
+    name = "QuickStart"
+    weight = -100
+    url = "docs/quickstart/"
+[[languages.en.menu.main]]
+    name = "GitHub"
+    url = "https://github.com/SmartIDE/SmartIDE"
+    pre = "<i class='fab fa-github'></i>"
+    weight = 50
 
 [markup]
   [markup.goldmark]
@@ -112,16 +134,18 @@ version = "0.1"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/smartIDE/smartIDE"
+github_repo = "https://github.com/SmartIDE/smartIDE"
+gitee_repo = "https://gitee.com/smartide/SmartIDE"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/smartIDE/smartide"
+github_project_repo = "https://github.com/SmartIDE/SmartIDE"
+gitee_project_repo = "https://gitee.com/smartide/SmartIDE"
 
 # Specify a value here if your content directory is not in your repo's root directory
-# github_subdir = "docs"
+github_subdir = "docs"
 
 # Uncomment this if you have a newer GitHub repo with "main" as the default branch,
 # or specify a new value if you want to reference another branch in your GitHub links
-# github_branch= "main"
+github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 # gcs_engine_id = "d72aa9b2712488cc3"
@@ -130,7 +154,7 @@ github_project_repo = "https://github.com/smartIDE/smartide"
 algolia_docsearch = false
 
 # Enable Lunr.js offline search
-offlineSearch = false
+offlineSearch = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
@@ -138,7 +162,7 @@ prism_syntax_highlighting = false
 # User interface configuration
 [params.ui]
 # Enable to show the side bar menu in its compact state.
-sidebar_menu_compact = false
+sidebar_menu_compact = true
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 #  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
@@ -184,7 +208,7 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
-	url = "https://github.com/google/docsy"
+	url = "https://github.com/smartide"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
 [[params.links.developer]]
